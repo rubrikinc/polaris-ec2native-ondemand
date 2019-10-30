@@ -9,7 +9,7 @@ The values of `POLARIS_SUBDOMAIN`, `USERNAME`, and `PASSWORD` can also be assign
 
 Ensure you set `snapcount` equal to the number of snapshots you want to retain, and enable or disable logging by setting `logging` equal to True or False in *polaris-ec2native-ondemand.py*
 
-Once configured, run this script using Python 3.6+ from an EC2 instance being protected by Polaris. Each time it is run, it will take an on demand snapshot of this instnace and expire (starting with the oldest) any on demand snapshots this instance in excess of `snapcount`. 
+Once configured, run this script using Python 3.6+ from an EC2 instance being protected by Polaris. Each time it is run, it will take an on demand snapshot of this instance and expire (starting with the oldest) any on demand snapshots this instance in excess of `snapcount`. 
 
 For example, if `snapcount` was set to 5, and you had daily on demand snapshots from Monday Tuesday Wednesday Thursday and Friday. Running this script on Saturday would take a new on demand snapshot, as well as expire the on demand snapshot from Monday. In the same scenario if `snapcont` was set to 4, the snapshots from Monday and Tuesday would be expired.
 
