@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # USE - Uses the Rubrik Polaris API to take an on demand snapshot of the EC2 instance running this script
-# expires oldest existing Polaris on demand snaps of this instance until # remaining <= snapcount
+# expires oldest existing Polaris on demand snaps of this instance until number remaining <= snapcount
 
 import requests
 import json
