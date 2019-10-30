@@ -1,6 +1,7 @@
 #!/usr/bin/python
-# USE - Takes an on demand snapshot of the EC2 instance running this script
-# Deletes oldest on demand snapshots of this ec2 instance if # of on demand snapshots exceeds snapcount
+# USE - Uses the Rubrik Polaris API to take an on demand snapshot of the EC2 instance running this script
+# expires oldest existing Polaris on demand snaps of this instance until # remaining <= snapcount
+
 import requests
 import json
 import datetime
